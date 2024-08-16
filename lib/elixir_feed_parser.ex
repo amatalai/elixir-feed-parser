@@ -17,11 +17,11 @@ defmodule ElixirFeedParser do
 
   def determine_feed_parser(xml) do
     cond do
-      GoogleDocsAtom.can_parse?(xml) -> {:ok, GoogleDocsAtom, xml}
-      ITunesRSS2.can_parse?(xml) -> {:ok, ITunesRSS2, xml}
-      FeedburnerAtom.can_parse?(xml) -> {:ok, FeedburnerAtom, xml}
-      FeedburnerRSS2.can_parse?(xml) -> {:ok, FeedburnerRSS2, xml}
-      Atom.can_parse?(xml) -> {:ok, Atom, xml}
+      # GoogleDocsAtom.can_parse?(xml) -> {:ok, GoogleDocsAtom, xml}
+      # ITunesRSS2.can_parse?(xml) -> {:ok, ITunesRSS2, xml}
+      # FeedburnerAtom.can_parse?(xml) -> {:ok, FeedburnerAtom, xml}
+      # FeedburnerRSS2.can_parse?(xml) -> {:ok, FeedburnerRSS2, xml}
+      # Atom.can_parse?(xml) -> {:ok, Atom, xml}
       RSS2.can_parse?(xml) -> {:ok, RSS2, xml}
       true -> {:error, :feed_format_unknown}
     end
