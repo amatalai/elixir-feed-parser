@@ -18,12 +18,11 @@ defmodule ElixirFeedParser.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :xmerl, :tzdata]]
+    [extra_applications: [:logger, :xmerl]]
   end
 
   defp deps do
     [
-      {:timex, "~> 3.4"},
       {:ex_doc, "~> 0.19", only: :dev},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
